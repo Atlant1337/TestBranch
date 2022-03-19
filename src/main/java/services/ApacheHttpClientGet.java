@@ -1,4 +1,4 @@
-package services;
+package main.java.services;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
@@ -44,6 +44,6 @@ public class ApacheHttpClientGet {
 
             e.printStackTrace();
         }
-        System.out.println("\nEdit File1* .... \n");
+        System.out.println("Edit File1** .... \n");
     }
 }
