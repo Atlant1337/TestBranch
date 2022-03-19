@@ -20,17 +20,14 @@ public class ValCurs {
     @XStreamImplicit(itemFieldName = "Valute")
     private List<services.BNM.Valute> valutes;
 
-    public String getDate() {
+    public String getDate1(String date) {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate1(String date) {
         this.date = date;
     }
 
-    public String getName() {
-        return name;
-    }
 
     public void setName(String name) {
         this.name = name;
