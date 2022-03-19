@@ -1,4 +1,4 @@
-package java.services.BNM;
+package services.BNM;
 
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
@@ -19,7 +19,7 @@ public class ValCurs {
     private String name;
 
     @XStreamImplicit(itemFieldName = "Valute")
-    private List<Valute> valutes;
+    private List<services.BNM.Valute> valutes;
 
     public String getDate() {
         return date;
@@ -37,11 +37,11 @@ public class ValCurs {
         this.name = name;
     }
 
-    public List<Valute> getValutes() {
+    public List<services.BNM.Valute> getValutes() {
         return valutes;
     }
 
-    public void setValutes(List<Valute> valutes) {
+    public void setValutes(List<services.BNM.Valute> valutes) {
         this.valutes = valutes;
     }
 }

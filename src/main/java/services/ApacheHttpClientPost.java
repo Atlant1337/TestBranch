@@ -1,4 +1,4 @@
-package main.java.services;
+package services;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
