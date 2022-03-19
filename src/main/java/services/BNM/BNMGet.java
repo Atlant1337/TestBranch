@@ -1,4 +1,4 @@
-package main.java.services.BNM;
+package services.BNM;
 
 import com.thoughtworks.xstream.XStream;
 import org.apache.http.HttpResponse;
@@ -15,8 +15,8 @@ public class BNMGet {
     public static void main(String[] args) {
         try {
             XStream xstream = new XStream();
-            xstream.processAnnotations(Valute.class);
-            xstream.processAnnotations(ValCurs.class);
+            xstream.processAnnotations(services.BNM.Valute.class);
+            xstream.processAnnotations(services.BNM.ValCurs.class);
             HttpClient httpClient = HttpClientBuilder.create().build();
             HttpGet getRequest = new HttpGet(
                     "https://bnm.md/en/official_exchange_rates?date=20.02.1994");
@@ -41,13 +41,13 @@ public class BNMGet {
             }
 
 //            System.out.println(xml);
-            ValCurs valCurs;
+            services.BNM.ValCurs valCurs;
 
             if (xml != null) {
-                valCurs = (ValCurs) xstream.fromXML(xml);
+                valCurs = (services.BNM.ValCurs) xstream.fromXML(xml);
 
 
-                for (Valute currentVal : valCurs.getValutes()) {
+                for (services.BNM.Valute currentVal : valCurs.getValutes()) {
                     System.out.println(currentVal);
                 }
             }
